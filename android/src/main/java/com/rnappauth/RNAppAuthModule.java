@@ -733,6 +733,7 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
     private AppAuthConfiguration createAppAuthConfiguration(ConnectionBuilder connectionBuilder) {
         return new AppAuthConfiguration
                 .Builder()
+                .setSkipIssuerHttpsCheck(true)
                 .setConnectionBuilder(connectionBuilder)
                 .build();
     }
